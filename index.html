@@ -154,16 +154,26 @@
             <div class="section-container">
                 <h2 class="section-title">Experience<span class="coord-mark">_02</span></h2>
                 <div class="timeline-container">
-                    <!-- Interactive system timeline (horizontal) -->
+                    <!-- Interactive system timeline -->
                     <div class="timeline-track">
-                        <article class="timeline-node" tabindex="0">
+                        <article class="timeline-node reveal-on-scroll" tabindex="0">
                             <div class="node-marker"></div>
                             <div class="node-content">
-                                <h3 class="role">Full Stack Developer</h3>
-                                <p class="company">TechPuram</p>
+                                <h3 class="role">Backend Developer</h3>
+                                <p class="company">TechPuram | Feb 2025 - Jun 2025</p>
                                 <div class="details">
-                                    <p><strong>Contribution:</strong> CRM application development, focused on the Import Module.</p>
-                                    <p ><strong>Responsibilities:</strong> Full-stack feature development, frontend interfaces, frontend↔backend API integration, business workflow implementation, debugging/improving existing functionality, CRM collaboration.</p>
+                                    <p><strong>Responsibilities:</strong> Engineered scalable Spring Boot microservices, implemented role-based JWT auth, and optimized database queries.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node reveal-on-scroll" tabindex="0">
+                            <div class="node-marker"></div>
+                            <div class="node-content">
+                                <h3 class="role">Junior Full Stack Intern</h3>
+                                <p class="company">Zenjade automation Pvt Ltd | Oct 2024 - Feb 2025</p>
+                                <div class="details">
+                                    <p><strong>Responsibilities:</strong> Developed custom web applications using Angular and Node.js for local businesses.</p>
                                 </div>
                             </div>
                         </article>
@@ -462,22 +472,20 @@
             </div>
         </section>
 
-        <!-- DEVELOPER JOURNEY SECTION -->
-        <section id="journey" class="journey-section schematic-divider">
-            <div class="section-container">
-                <h2 class="section-title">Developer Journey<span class="coord-mark">_06</span></h2>
-                <div class="journey-scroll-container">
-                    <!-- Horizontal scroll timeline injected by JS -->
-                </div>
-            </div>
-        </section>
 
         <!-- CERTIFICATIONS SECTION -->
         <section id="certifications" class="certifications-section schematic-divider">
             <div class="section-container">
-                <h2 class="section-title">Certifications<span class="coord-mark">_07</span></h2>
-                <div class="certifications-grid" id="certifications-grid">
-                    <!-- Certification cards injected by JS -->
+                <h2 class="section-title">Certifications<span class="coord-mark">_06</span></h2>
+                <div class="skills-grid" id="certifications-grid">
+                    <div class="stat-card reveal-on-scroll" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 30px 20px;">
+                        <div style="font-size: 2.5rem; text-shadow: 0 0 15px var(--color-accent-glow);">📜</div>
+                        <h3 style="font-size: 1rem; color: var(--color-text); line-height: 1.4; text-transform: none; font-weight: 500;">Advanced Master Program in Next-Gen AI Integrated Java Full stack Web Development</h3>
+                    </div>
+                    <div class="stat-card reveal-on-scroll" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 30px 20px;">
+                        <div style="font-size: 2.5rem; text-shadow: 0 0 15px var(--color-accent-glow);">🎓</div>
+                        <h3 style="font-size: 1rem; color: var(--color-text); line-height: 1.4; text-transform: none; font-weight: 500;">Advanced Master Program in DevOPS</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -575,6 +583,26 @@
             });
         } else if (customCursor) {
             customCursor.style.display = 'none';
+        }
+
+        // Mobile Navigation Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('active');
+                });
+            });
         }
     </script>
 </body>

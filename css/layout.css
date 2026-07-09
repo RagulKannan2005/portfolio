@@ -1,0 +1,73 @@
+/* layout.css - Base Layout & Sections */
+
+/* Global Background Image (Blueprint Grid motif) */
+body {
+  background-image: 
+    linear-gradient(var(--color-blueprint-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-blueprint-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+#main-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+  position: relative;
+}
+
+/* Schematic Section Divider */
+.schematic-divider {
+  position: relative;
+  border-top: var(--border-dashed);
+}
+.schematic-divider::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: var(--space-lg);
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.coord-mark {
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+  opacity: 0.7;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-top: calc(var(--space-xl) * -0.5);
+  margin-bottom: var(--space-xl);
+}
+
+/* Global focus state for accessibility */
+:focus-visible {
+  outline: 2px dashed var(--color-accent);
+  outline-offset: 4px;
+}

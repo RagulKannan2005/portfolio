@@ -1,0 +1,51 @@
+/* utilities.css - Helper classes */
+
+/* Accessibility: Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Accessibility: Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: var(--color-bg);
+  color: var(--color-accent);
+  padding: var(--space-sm) var(--space-md);
+  z-index: 1000;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  border: var(--border-thin);
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: var(--radius-sm);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Spacing and Alignment */
+.text-center { text-align: center; }
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+
+/* Custom Cursor Hide Override */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}

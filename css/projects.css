@@ -1,0 +1,195 @@
+/* projects.css - Styles for Projects Grid and 3D Exploded Cards */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    justify-content: center;
+}
+.filter-btn {
+    background: transparent;
+    border: var(--border-thin);
+    color: var(--color-text-muted);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    transition: all var(--transition-fast);
+}
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-accent-glow);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+}
+
+.project-card {
+    perspective: 1500px;
+    height: 420px;
+    outline: none;
+}
+
+.project-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-slow);
+}
+
+/* On Hover: Rotate the card to isometric view */
+.project-card:hover .project-card-inner,
+.project-card:focus-visible .project-card-inner,
+.project-card.expanded .project-card-inner {
+    transform: rotateX(55deg) rotateZ(-35deg) translateZ(-80px);
+}
+
+.project-front,
+.project-exploded {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--color-bg-alt);
+    border: var(--border-thin);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transform-style: preserve-3d;
+}
+
+.project-front {
+    z-index: 2;
+    transition: opacity var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover .project-front,
+.project-card:focus-visible .project-front,
+.project-card.expanded .project-front {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    line-height: 1.2;
+}
+
+.project-problem {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+/* Exploded view layers */
+.project-exploded {
+    background: transparent;
+    border: none;
+    padding: 0;
+    pointer-events: none; /* Let pointer events through to inner elements if needed */
+}
+
+.arch-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Move each layer up on the Z axis based on its index */
+.project-card:hover .arch-layer,
+.project-card:focus-visible .arch-layer,
+.project-card.expanded .arch-layer {
+    opacity: 1;
+    visibility: visible;
+    transform: translateZ(calc(var(--layer-index) * 60px));
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.3);
+    pointer-events: auto; /* enable links inside */
+}
+
+/* Fade layers slightly as they go down to simulate depth */
+.arch-layer:not(.project-details) {
+    background: rgba(var(--color-bg-glass), 0.7);
+}
+
+.layer-name {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.layer-text {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.project-details {
+    background: var(--color-bg-alt);
+    justify-content: flex-start;
+}
+.project-details strong {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.feature-list {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-md);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    list-style: square;
+    margin-bottom: var(--space-md);
+}
+.project-links {
+    margin-top: auto;
+}
+.project-links a {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        height: 450px;
+    }
+    .project-card:hover .arch-layer,
+    .project-card:focus-visible .arch-layer,
+    .project-card.expanded .arch-layer {
+        transform: translateZ(calc(var(--layer-index) * 45px));
+    }
+}

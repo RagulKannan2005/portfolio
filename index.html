@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Ragul Kannan | Java Full Stack Developer</title>
+    <meta name="title" content="Ragul Kannan | Java Full Stack Developer">
+    <meta name="description" content="Portfolio of Ragul Kannan, a Java Full Stack Developer specializing in Spring Boot, Angular, and scalable systems architectures.">
+    <meta name="keywords" content="Ragul Kannan, Java Developer, Full Stack Developer, Spring Boot, Angular, Software Engineer, Portfolio">
+    <meta name="author" content="Ragul Kannan">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ragulkannan.dev/">
+    <meta property="og:title" content="Ragul Kannan | Java Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Ragul Kannan, a Java Full Stack Developer specializing in Spring Boot, Angular, and scalable systems architectures.">
+    <meta property="og:image" content="https://ragulkannan.dev/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ragulkannan.dev/">
+    <meta property="twitter:title" content="Ragul Kannan | Java Full Stack Developer">
+    <meta property="twitter:description" content="Portfolio of Ragul Kannan, a Java Full Stack Developer specializing in Spring Boot, Angular, and scalable systems architectures.">
+    <meta property="twitter:image" content="https://ragulkannan.dev/assets/og-image.jpg">
+    <!-- Meta tags for SEO -->
+    <link rel="canonical" href="https://ragulkannan.dev/">
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS (Stylesheets will be created in Phase 3 & 4) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/developer-core.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/architecture-lab.css">
+    <link rel="stylesheet" href="css/contact-footer.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Custom Cursor (Desktop) -->
+    <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+
+    <!-- Background Architecture Canvas -->
+    <canvas id="architecture-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader" aria-live="polite">
+        <div class="loader-terminal">
+            <span class="prompt">> </span><span class="typing">Initializing developer environment...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="main-nav" class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Ragul Kannan Home">RK<span class="cursor-blink">_</span></a>
+            
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-links">
+                <span class="sr-only">Toggle Menu</span>
+                <span class="hamburger"></span>
+            </button>
+
+            <nav id="nav-links" class="nav-links">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#architecture-lab">Lab</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <!-- SVGs to be added in later phase -->
+                        <span class="theme-icon-placeholder">☀️</span>
+                    </button>
+                    <a href="assets/Ragul%20kannan-resume.pdf" class="btn btn-outline" download>Resume</a>
+                    <button class="cmd-k-trigger" aria-label="Open command palette (Ctrl+K)">
+                        <kbd>Ctrl</kbd>+<kbd>K</kbd>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- Scroll Progress Rail -->
+        <div class="scroll-progress-rail" aria-hidden="true">
+            <div class="scroll-progress-bar"></div>
+        </div>
+    </header>
+
+    <!-- Command Palette Modal -->
+    <dialog id="command-palette" class="command-palette">
+        <!-- Content will be injected by JS -->
+    </dialog>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">System initialized. Welcome, I am</p>
+                <h1 class="name">Ragul Kannan</h1>
+                <h2 class="title" aria-live="polite">
+                    <span class="role-cycle">Java Full Stack Developer</span>
+                </h2>
+                <p class="headline">I build secure backend systems and interactive full-stack applications.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                    <a href="assets/Ragul%20kannan-resume.pdf" class="btn btn-secondary">View Resume</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/RagulKannan2005" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ragul-kannan-rajendran-090aba2b7" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="mailto:rahul2005kannan@gmail.com" aria-label="Email">Email</a>
+                </div>
+            </div>
+            <!-- Interactive 3D Hub -->
+            <div class="developer-core-container" aria-label="Interactive technology nodes">
+                <!-- 3D nodes injected by JS -->
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">About<span class="coord-mark">_01</span></h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Ragul Kannan is a <strong>Java Full Stack Developer</strong> with experience building full-stack applications and business systems. He worked as a Full Stack Developer at TechPuram, contributing to a CRM application including its Import Module.</p>
+                        <p>His backend stack: Java, Spring Boot, Spring Security, JPA, Hibernate, REST APIs, JWT auth, SQL, MySQL. Frontend: Angular, JavaScript, HTML, CSS.</p>
+                        <p>He has designed database schemas, implemented authentication/authorization, built CRUD modules, role-based systems, and inventory workflows, and is currently deepening Docker/deployment/DevOps knowledge.</p>
+                    </div>
+                    <div class="about-stats" id="animated-counters" aria-live="polite">
+                        <!-- Stats injected via config.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="experience-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Experience<span class="coord-mark">_02</span></h2>
+                <div class="timeline-container">
+                    <!-- Interactive system timeline (horizontal) -->
+                    <div class="timeline-track">
+                        <article class="timeline-node" tabindex="0">
+                            <div class="node-marker"></div>
+                            <div class="node-content">
+                                <h3 class="role">Full Stack Developer</h3>
+                                <p class="company">TechPuram</p>
+                                <div class="details">
+                                    <p><strong>Contribution:</strong> CRM application development, focused on the Import Module.</p>
+                                    <p ><strong>Responsibilities:</strong> Full-stack feature development, frontend interfaces, frontend↔backend API integration, business workflow implementation, debugging/improving existing functionality, CRM collaboration.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Skills & Technologies<span class="coord-mark">_03</span></h2>
+                <div class="skills-grid">
+                    
+                    <!-- Backend Skill Card -->
+                    <article class="project-card skill-3d-card" tabindex="0">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <h3 class="project-title">Backend</h3>
+                                <p class="project-problem">Server-side logic, API development, and data processing.</p>
+                                <div class="project-stack">
+                                    <span class="chip">Java</span>
+                                    <span class="chip">Spring Boot</span>
+                                </div>
+                            </div>
+                            <div class="project-exploded">
+                                <div class="arch-layer" style="--layer-index: 1;">
+                                    <span class="layer-name">Core Language</span>
+                                    <span class="layer-text">Java</span>
+                                </div>
+                                <div class="arch-layer" style="--layer-index: 2;">
+                                    <span class="layer-name">Framework</span>
+                                    <span class="layer-text">Spring Boot</span>
+                                </div>
+                                <div class="arch-layer project-details" style="--layer-index: 3;">
+                                    <strong>Technologies</strong>
+                                    <ul class="feature-list">
+                                        <li>Spring Security</li>
+                                        <li>REST APIs</li>
+                                        <li>JWT Authentication</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Frontend Skill Card -->
+                    <article class="project-card skill-3d-card" tabindex="0">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <h3 class="project-title">Frontend</h3>
+                                <p class="project-problem">Building interactive user interfaces and responsive web applications.</p>
+                                <div class="project-stack">
+                                    <span class="chip">Angular</span>
+                                    <span class="chip">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="project-exploded">
+                                <div class="arch-layer" style="--layer-index: 1;">
+                                    <span class="layer-name">Fundamentals</span>
+                                    <span class="layer-text">HTML5 & CSS3</span>
+                                </div>
+                                <div class="arch-layer" style="--layer-index: 2;">
+                                    <span class="layer-name">Language</span>
+                                    <span class="layer-text">JavaScript / TS</span>
+                                </div>
+                                <div class="arch-layer project-details" style="--layer-index: 3;">
+                                    <strong>Framework</strong>
+                                    <ul class="feature-list">
+                                        <li>Angular Components</li>
+                                        <li>Services & Routing</li>
+                                        <li>Responsive Design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Database & Tools Skill Card -->
+                    <article class="project-card skill-3d-card" tabindex="0">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <h3 class="project-title">Database & Tools</h3>
+                                <p class="project-problem">Data storage, modeling, version control, and containerization.</p>
+                                <div class="project-stack">
+                                    <span class="chip">SQL</span>
+                                    <span class="chip">Docker</span>
+                                </div>
+                            </div>
+                            <div class="project-exploded">
+                                <div class="arch-layer" style="--layer-index: 1;">
+                                    <span class="layer-name">DevOps & VCS</span>
+                                    <span class="layer-text">Git & Docker</span>
+                                </div>
+                                <div class="arch-layer" style="--layer-index: 2;">
+                                    <span class="layer-name">ORM</span>
+                                    <span class="layer-text">JPA / Hibernate</span>
+                                </div>
+                                <div class="arch-layer project-details" style="--layer-index: 3;">
+                                    <strong>Database</strong>
+                                    <ul class="feature-list">
+                                        <li>Relational SQL</li>
+                                        <li>MySQL Database</li>
+                                        <li>Schema Design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Projects<span class="coord-mark">_04</span></h2>
+                <!-- Filter Bar -->
+                <div class="project-filters" aria-label="Filter projects by technology">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Spring Boot</button>
+                    <button class="filter-btn">Angular</button>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <article class="project-card" tabindex="0">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <h3 class="project-title">CRM Import Module</h3>
+                                <p class="project-problem">A full-stack workflow system developed at TechPuram to handle complex data imports, validations, and mapping.</p>
+                                <div class="project-stack">
+                                    <span class="chip">Java</span>
+                                    <span class="chip">Spring Boot</span>
+                                    <span class="chip">Angular</span>
+                                </div>
+                            </div>
+                            <div class="project-exploded">
+                                <div class="arch-layer" style="--layer-index: 1;">
+                                    <span class="layer-name">Database</span>
+                                    <span class="layer-text">MySQL & JPA</span>
+                                </div>
+                                <div class="arch-layer" style="--layer-index: 2;">
+                                    <span class="layer-name">Backend</span>
+                                    <span class="layer-text">Spring Boot REST API</span>
+                                </div>
+                                <div class="arch-layer project-details" style="--layer-index: 3;">
+                                    <strong>Features</strong>
+                                    <ul class="feature-list">
+                                        <li>Role-based access control</li>
+                                        <li>Data validation workflows</li>
+                                        <li>Seamless API integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 (Example) -->
+                    <article class="project-card" tabindex="0">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <h3 class="project-title">Inventory & Auth System</h3>
+                                <p class="project-problem">A robust business system featuring secure CRUD workflows and JWT-based authentication.</p>
+                                <div class="project-stack">
+                                    <span class="chip">Spring Security</span>
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">Hibernate</span>
+                                </div>
+                            </div>
+                            <div class="project-exploded">
+                                <div class="arch-layer" style="--layer-index: 1;">
+                                    <span class="layer-name">Data</span>
+                                    <span class="layer-text">Relational Modeling</span>
+                                </div>
+                                <div class="arch-layer" style="--layer-index: 2;">
+                                    <span class="layer-name">Security</span>
+                                    <span class="layer-text">JWT Authentication</span>
+                                </div>
+                                <div class="arch-layer project-details" style="--layer-index: 3;">
+                                    <strong>Features</strong>
+                                    <ul class="feature-list">
+                                        <li>Secure endpoints</li>
+                                        <li>CRUD operations</li>
+                                        <li>Optimized database queries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ARCHITECTURE LAB SECTION -->
+        <section id="architecture-lab" class="lab-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Architecture Lab<span class="coord-mark">_05</span></h2>
+                <p class="section-subtitle">Interactive systems and workflow diagrams.</p>
+                <div class="lab-grid" id="lab-visualizations">
+                    <!-- JWT Auth Flow -->
+                    <div class="lab-card">
+                        <div class="lab-card-header">
+                            <div class="lab-title-area">
+                                <h3>JWT Authentication Flow</h3>
+                                <p class="lab-caption">Stateless, secure API authentication using Spring Security filters.</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">View Code</a>
+                        </div>
+                        
+                        <div class="lab-visualization">
+                            <div class="lab-diagram" id="diagram-jwt-auth">
+                                <div class="lab-node active" data-index="0">
+                                    <div class="lab-node-circle">1</div>
+                                    <div class="lab-node-label">Login Request</div>
+                                </div>
+                                <div class="lab-connector" data-from="0" data-to="1"></div>
+                                
+                                <div class="lab-node" data-index="1">
+                                    <div class="lab-node-circle">2</div>
+                                    <div class="lab-node-label">Auth Manager</div>
+                                </div>
+                                <div class="lab-connector" data-from="1" data-to="2"></div>
+                                
+                                <div class="lab-node" data-index="2">
+                                    <div class="lab-node-circle">3</div>
+                                    <div class="lab-node-label">JWT Gen</div>
+                                </div>
+                                <div class="lab-connector" data-from="2" data-to="3"></div>
+                                
+                                <div class="lab-node" data-index="3">
+                                    <div class="lab-node-circle">4</div>
+                                    <div class="lab-node-label">Secure Request</div>
+                                </div>
+                                <div class="lab-connector" data-from="3" data-to="4"></div>
+                                
+                                <div class="lab-node" data-index="4">
+                                    <div class="lab-node-circle">5</div>
+                                    <div class="lab-node-label">JWT Filter</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="lab-controls">
+                            <button class="lab-btn lab-btn-prev" onclick="labStep('jwt-auth', -1)" aria-label="Previous step">←</button>
+                            <button class="lab-btn lab-btn-next" onclick="labStep('jwt-auth', 1)" aria-label="Next step">→</button>
+                            <button class="lab-btn lab-btn-reset" onclick="labStep('jwt-auth', 0, true)" aria-label="Reset animation">↻</button>
+                        </div>
+                        
+                        <div class="lab-explanation slide-up" id="explanation-jwt-auth">
+                            <strong>Login Request:</strong> Client sends credentials to /api/auth/login.
+                        </div>
+                    </div>
+
+                    <script>
+                        const labData = {
+                            'jwt-auth': [
+                                { title: 'Login Request', desc: 'Client sends credentials to /api/auth/login.' },
+                                { title: 'Auth Manager', desc: 'AuthenticationManager uses UserDetailsService to verify credentials against the database.' },
+                                { title: 'JWT Generation', desc: 'If valid, a signed JWT is generated and returned to the client.' },
+                                { title: 'Protected Request', desc: 'Client attaches JWT in Authorization header for subsequent requests.' },
+                                { title: 'JWT Filter', desc: 'Spring Security OncePerRequestFilter validates the token and sets the SecurityContext.' }
+                            ]
+                        };
+                        let currentLabStep = 0;
+
+                        function labStep(id, dir, reset = false) {
+                            const steps = labData[id];
+                            
+                            if (reset) currentLabStep = 0;
+                            else currentLabStep = Math.max(0, Math.min(currentLabStep + dir, steps.length - 1));
+                            
+                            const diagram = document.getElementById('diagram-' + id);
+                            const explanation = document.getElementById('explanation-' + id);
+                            
+                            diagram.querySelectorAll('.lab-node').forEach((node, i) => {
+                                node.className = 'lab-node';
+                                if (i === currentLabStep) node.classList.add('active');
+                                else if (i < currentLabStep) node.classList.add('completed');
+                            });
+                            
+                            diagram.querySelectorAll('.lab-connector').forEach((conn, i) => {
+                                conn.className = 'lab-connector';
+                                if (i < currentLabStep) conn.classList.add('active');
+                            });
+                            
+                            explanation.innerHTML = '<strong>' + steps[currentLabStep].title + ':</strong> ' + steps[currentLabStep].desc;
+                            explanation.classList.remove('slide-up');
+                            void explanation.offsetWidth;
+                            explanation.classList.add('slide-up');
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPER JOURNEY SECTION -->
+        <section id="journey" class="journey-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Developer Journey<span class="coord-mark">_06</span></h2>
+                <div class="journey-scroll-container">
+                    <!-- Horizontal scroll timeline injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="certifications-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Certifications<span class="coord-mark">_07</span></h2>
+                <div class="certifications-grid" id="certifications-grid">
+                    <!-- Certification cards injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section schematic-divider">
+            <div class="section-container">
+                <h2 class="section-title">Initialize Connection<span class="coord-mark">_08</span></h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Connect</h3>
+                        <p>Let's build something scalable.</p>
+                        <ul class="contact-links">
+                            <li>Email: <a href="mailto:rahul2005kannan@gmail.com">rahul2005kannan@gmail.com</a></li>
+                            <li>LinkedIn: <a href="https://www.linkedin.com/in/ragul-kannan-rajendran-090aba2b7" target="_blank">linkedin.com/in/ragul-kannan-rajendran-090aba2b7</a></li>
+                            <li>GitHub: <a href="https://github.com/RagulKannan2005" target="_blank">github.com/RagulKannan2005</a></li>
+                        </ul>
+                    </div>
+                    <form id="contact-form" class="api-form" novalidate>
+                        <div class="form-header">
+                            <span class="method">POST</span>
+                            <span class="endpoint">/api/contact</span>
+                        </div>
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                                <span class="error-msg" id="name-error" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                                <span class="error-msg" id="email-error" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+                                <span class="error-msg" id="subject-error" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required aria-describedby="message-error" rows="5"></textarea>
+                                <span class="error-msg" id="message-error" aria-live="polite"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">Send Payload</button>
+                        </div>
+                        <div class="form-status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer schematic-divider">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Ragul Kannan</h3>
+                <p>Java Full Stack Developer</p>
+            </div>
+            <div class="footer-terminal">
+                <span class="prompt">guest@rk-portfolio:~$ </span>
+                <input type="text" id="terminal-input" aria-label="Terminal interface (try typing whoami)" placeholder="Type a command...">
+                <div id="terminal-output" aria-live="polite"></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Ragul Kannan. Built without frameworks.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS (will be implemented in future phases) -->
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Inline script to power cursor locally without server CORS issues -->
+    <script>
+        const customCursor = document.getElementById('custom-cursor');
+        if (customCursor && window.matchMedia('(pointer: fine)').matches) {
+            document.body.classList.add('custom-cursor-active');
+            
+            document.addEventListener('mousemove', (e) => {
+                customCursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+            }, { passive: true });
+
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.closest('a, button, input, textarea, .timeline-node, [tabindex="0"], .lab-btn, .filter-btn')) {
+                    customCursor.classList.add('cursor-hover');
+                }
+            });
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.closest('a, button, input, textarea, .timeline-node, [tabindex="0"], .lab-btn, .filter-btn')) {
+                    customCursor.classList.remove('cursor-hover');
+                }
+            });
+        } else if (customCursor) {
+            customCursor.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

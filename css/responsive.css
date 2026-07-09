@@ -1,0 +1,31 @@
+/* responsive.css - Global Responsive Overrides */
+
+@media (max-width: 1024px) {
+  :root {
+    --space-2xl: 4rem;
+  }
+  
+  .section-container {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-container {
+    padding: var(--space-lg) var(--space-sm);
+  }
+  
+  /* Decrease background grid size on smaller screens */
+  body {
+    background-size: 30px 30px;
+  }
+}

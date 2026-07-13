@@ -1,9 +1,9 @@
 export const portfolioData = {
     stats: [
-        { id: 'projects', label: 'Projects Built', value: 12, suffix: '+' },
-        { id: 'backend', label: 'Backend Modules', value: 25, suffix: '+' },
-        { id: 'tech', label: 'Technologies', value: 15, suffix: '' },
-        { id: 'certs', label: 'Certifications', value: 3, suffix: '' }
+        { id: 'projects', label: 'Projects Built', value: 7, suffix: '+' },
+        { id: 'backend', label: 'Backend Modules', value: 10, suffix: '+' },
+        { id: 'tech', label: 'Technologies', value: 7, suffix: '' },
+        { id: 'certs', label: 'Certifications', value: 2, suffix: '' }
     ],
     skills: {
         languages: [
@@ -51,7 +51,7 @@ export const portfolioData = {
                 { layer: 'Backend', text: 'Spring Boot REST API' },
                 { layer: 'Database', text: 'MySQL / Hibernate JPA' }
             ],
-            github: 'https://github.com/[Add GitHub URL]',
+            github: 'https://github.com/RagulKannan2005/IMS',
             demo: '#'
         },
         {
@@ -109,7 +109,7 @@ export const portfolioData = {
                 { layer: 'Backend', text: 'Express API' },
                 { layer: 'Database', text: 'PostgreSQL Dynamic Schemas' }
             ],
-            github: 'https://github.com/[Add GitHub URL]',
+            github: 'https://github.com/RagulKannan2005/saas-on-Aws',
             demo: '#'
         }
     ],

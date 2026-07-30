@@ -1,8 +1,10 @@
 export default class CommandPalette {
-    constructor(themeManager) {
+    constructor(themeManager, soundEngine, techMascot) {
         this.palette = document.getElementById('command-palette');
         this.trigger = document.querySelector('.cmd-k-trigger');
         this.themeManager = themeManager;
+        this.soundEngine = soundEngine;
+        this.techMascot = techMascot;
         
         if (this.palette) {
             this.init();
@@ -20,7 +22,11 @@ export default class CommandPalette {
             // Check for Ctrl+K or Cmd+K
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
-                this.open();
+                if (this.palette.open) {
+                    this.close();
+                } else {
+                    this.open();
+                }
             }
             if (e.key === 'Escape' && this.palette.open) {
                 this.close();
@@ -49,7 +55,7 @@ export default class CommandPalette {
         this.palette.innerHTML = `
             <div class="cmd-palette-content">
                 <div class="cmd-header">
-                    <input type="text" id="cmd-search" placeholder="Search commands, projects..." aria-label="Command palette search">
+                    <input type="text" id="cmd-search" placeholder="Type a command or search section..." aria-label="Command palette search">
                 </div>
                 <div class="cmd-body">
                     <div class="cmd-group">
@@ -57,11 +63,14 @@ export default class CommandPalette {
                         <button class="cmd-action" data-action="navigate" data-value="#about">Go to About</button>
                         <button class="cmd-action" data-action="navigate" data-value="#projects">Go to Projects</button>
                         <button class="cmd-action" data-action="navigate" data-value="#architecture-lab">Go to Architecture Lab</button>
+                        <button class="cmd-action" data-action="navigate" data-value="#contact">Go to Contact</button>
                     </div>
                     <div class="cmd-group">
-                        <span class="cmd-group-label">Actions</span>
-                        <button class="cmd-action" data-action="toggle-theme">Toggle Theme</button>
-                        <button class="cmd-action" data-action="download-resume">Download Resume</button>
+                        <span class="cmd-group-label">System Actions</span>
+                        <button class="cmd-action" data-action="toggle-sound">🔊 Toggle Audio SFX</button>
+                        <button class="cmd-action" data-action="talk-mascot">🤖 Talk to Byte (AI Mascot)</button>
+                        <button class="cmd-action" data-action="toggle-theme">☀️ Toggle Dark / Light Theme</button>
+                        <button class="cmd-action" data-action="download-resume">📄 Download Resume</button>
                     </div>
                 </div>
                 <div class="cmd-footer">
@@ -74,6 +83,9 @@ export default class CommandPalette {
     }
 
     open() {
+        if (this.soundEngine) {
+            this.soundEngine.playChime();
+        }
         this.palette.showModal();
         const searchInput = document.getElementById('cmd-search');
         if (searchInput) {
@@ -87,6 +99,9 @@ export default class CommandPalette {
     }
 
     handleAction(action, value) {
+        if (this.soundEngine) {
+            this.soundEngine.playClick();
+        }
         switch(action) {
             case 'navigate':
                 window.location.hash = value;
@@ -94,9 +109,16 @@ export default class CommandPalette {
             case 'toggle-theme':
                 if (this.themeManager) this.themeManager.toggleTheme();
                 break;
+            case 'toggle-sound':
+                if (this.soundEngine) this.soundEngine.toggleSound();
+                break;
+            case 'talk-mascot':
+                if (this.techMascot) this.techMascot.triggerNextTip();
+                break;
             case 'download-resume':
-                window.open('assets/resume/Ragul-Kannan-Resume.pdf', '_blank');
+                window.open('assets/Ragul%20kannan-resume.pdf', '_blank');
                 break;
         }
     }
 }
+

@@ -41,3 +41,68 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* 3D Tilt Card Perspective */
+.tilt-card-active {
+    transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
+    will-change: transform;
+    position: relative;
+}
+
+/* Cursor-Tracking Spotlight Border Effect */
+.project-card, .lab-card, .stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before, .lab-card::before, .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: radial-gradient(
+        400px circle at var(--spotlight-x, -500px) var(--spotlight-y, -500px),
+        var(--color-accent, #00f0ff),
+        transparent 40%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Cyber Text Glitch Animation */
+.cyber-glitch-active {
+    animation: textGlitch 0.4s ease forwards;
+}
+
+@keyframes textGlitch {
+    0% {
+        text-shadow: 2px 0 var(--color-accent, #00f0ff), -2px 0 #ff0055;
+        transform: translate(0);
+    }
+    20% {
+        text-shadow: -2px 0 var(--color-accent, #00f0ff), 2px 0 #ff0055;
+        transform: translate(-2px, 1px);
+    }
+    40% {
+        text-shadow: 2px 0 #ff0055, -2px 0 var(--color-accent, #00f0ff);
+        transform: translate(2px, -1px);
+    }
+    60% {
+        text-shadow: -1px 0 var(--color-accent, #00f0ff), 1px 0 #ff0055;
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        text-shadow: 1px 0 #ff0055, -1px 0 var(--color-accent, #00f0ff);
+        transform: translate(1px, 0);
+    }
+    100% {
+        text-shadow: none;
+        transform: translate(0);
+    }
+}
+

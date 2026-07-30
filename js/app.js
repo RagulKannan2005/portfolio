@@ -7,19 +7,25 @@ import TechnologyGalaxy from './TechnologyGalaxy.js';
 import ProjectsController from './Projects.js';
 import ArchitectureLab from './ArchitectureLab.js';
 import MiscSections from './MiscSections.js';
+import SoundEngine from './SoundEngine.js';
+import TechMascot from './TechMascot.js';
+import CardEffects from './CardEffects.js';
 import { portfolioData } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize components
+    const soundEngine = new SoundEngine();
     const themeManager = new ThemeManager();
     const cursorController = new CursorController();
     const navigationController = new NavigationController();
-    const commandPalette = new CommandPalette(themeManager);
+    const techMascot = new TechMascot(soundEngine);
+    const commandPalette = new CommandPalette(themeManager, soundEngine, techMascot);
     const developerCore = new DeveloperCore();
     const techGalaxy = new TechnologyGalaxy();
     const projects = new ProjectsController();
     const lab = new ArchitectureLab();
     const misc = new MiscSections();
+    const cardEffects = new CardEffects(soundEngine);
 
     // Initialize Animated Counters (About Section)
     initCounters();
